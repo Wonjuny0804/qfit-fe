@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/center": {
+      "name": "/center",
+      "lambdaFunction": "qfit3994f910",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
