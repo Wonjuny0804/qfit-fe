@@ -5,6 +5,7 @@ import Link from "next/link";
 import CirclePlus from "../../public/icons/circle.svg";
 import { useRouter } from "next/router";
 import mockData from "../../public/mockData.json";
+import ListItem from "src/components/ReviewRoom/ListItem";
 
 const ReviewRoomListPage = () => {
   const router = useRouter();
@@ -36,16 +37,13 @@ const ReviewRoomListPage = () => {
         </Link>
       </div>
 
-      <div>
+      <ul className={`px-6`}>
         {mockData.map((data, index) => (
-          <div key={`review-room-data-${index}`}>
-            <span>{data.name}</span>
-            <span>{data.phone}</span>
-            <span>{data.postCode}</span>
-            <span>{data.address}</span>
-          </div>
+          <li key={`review-room-data-${index}`} className={`border-b border-1`}>
+            <ListItem name={data.name} distance={""} address={data.address} />
+          </li>
         ))}
-      </div>
+      </ul>
     </Layout>
   );
 };
