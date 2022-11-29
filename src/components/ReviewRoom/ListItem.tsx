@@ -25,7 +25,7 @@ const ListItem = ({ name, distance, address }: Props) => {
         {address}
       </div>
       <div className={`mt-[10px]`}>
-        <Stars stars={4} reviews={4} likes={25} />
+        <Stars stars={4} reviews={4} likes={25} id={`review-room-list-item`} />
       </div>
     </div>
   );
